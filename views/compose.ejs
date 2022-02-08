@@ -1,0 +1,26 @@
+<%- include("partials/boilerplate-navbar") %>
+    <div class="container my-4">
+
+
+
+        <h2 class="pb-0 mb-1">compose new entry</h2>
+        <p class="">What are you thinking about today?</p>
+
+        <form action="/compose" method="post">
+
+            <div class="mb-2">
+                <label for="submissionTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" name="submissionTitle">
+            </div>
+            <div class="mb-2">
+                <label for="submissionText" class="form-label">Post</label>
+                <textarea rows="3" cols="20" type="text" class="form-control" name="submissionText"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary mt-1">Publish</button>
+        </form>
+
+    </div>
+
+
+
+    <%- include("partials/footer") %>
