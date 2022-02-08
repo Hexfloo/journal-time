@@ -14,16 +14,15 @@ app.set("public", path.join(__dirname, "/public"));
 //all posts:
 let allPosts = [];
 
-////pages
 //home page (the journal):
 app.get("/", function (req, res) {
     res.render("home", { allPosts });
 });
+
 //about page:
 app.get("/about", function (req, res) {
     res.render("about");
 });
-
 
 //compose new journal entry:
 app.get("/compose", function (req, res) {
@@ -38,7 +37,7 @@ app.post("/compose", function (req, res) {
     res.redirect("/");
 })
 
-///specific journal entry pages
+//specific journal entry pages
 app.get("/posts/:searchedTitle", function (req, res) {
     const searchedTitle = _.lowerCase(req.params.searchedTitle);
 
@@ -53,8 +52,7 @@ app.get("/posts/:searchedTitle", function (req, res) {
 });
 
 
-
-////port listening
+//port listening
 app.listen(3000, function (req, res) {
     console.log("listening on port 3000")
 });
