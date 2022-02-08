@@ -1,0 +1,22 @@
+<%- include("partials/boilerplate-navbar") %>
+
+
+    <div class="container mt-4 mb-2 pb-5">
+        <h2 class="mb-1 pb-0">My Journal Entries</h2>
+        <p class="mt-0 pt-0 mb-4">Compose a new journal entry <a href="/compose"
+                class="link-dark text-decoration-none unique-a">here</a>.
+        </p>
+        <% allPosts.forEach(function(post) { %>
+            <h4 class="mt-3">
+                <%= post.submissionTitle %>
+            </h4>
+            <p>
+                <%= post.submissionText.substring(0,200) + "..." %>
+                    <a href="/posts/<%= post.submissionTitle %>" class="link-dark text-decoration-none unique-a">Read
+                        more</a>
+            </p>
+            <% }); %>
+    </div>
+
+
+    <%- include("partials/footer") %>
