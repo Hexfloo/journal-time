@@ -1,12 +1,22 @@
 <%- include("partials/boilerplate-navbar") %>
 
-    <div class="container mt-4 mb-2 pb-5">
-        <h2 class="mb-1 pb-0">
-            <%= title %>
+    <div class="container post-container my-4 py-3 px-4">
+        <h2 class="mb-1 pb-0 fw-bold">
+            <%= searchedPost.submissionTitle %>
         </h2>
+
         <p>
-            <%= text %>
+            <%= searchedPost.submissionDate %>
         </p>
+
+        <p>
+            By <%= searchedPost.submissionAuthor %>
+        </p>
+
+        <p>
+            <%= searchedPost.submissionText %>
+        </p>
+
 
     </div>
 
