@@ -1,5 +1,5 @@
-# journal-time
-Clean and simple journaling platform :green_book::open_book: <br>
+# journal-time :green_book::open_book:
+Clean and simple journaling platform  <br>
 Made this journal to practice EJS, express and all that good stuff.
 Try it here: https://boiling-beach-01310.herokuapp.com/
 
